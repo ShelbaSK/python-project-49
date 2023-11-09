@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from ..cli import welcome_user
+import brain_games.cli as cli
 
 
 def greetings():
@@ -8,7 +8,7 @@ def greetings():
 
 def main():
     greetings()
-    welcome_user()
+    cli.welcome_user()
 
 
 if __name__ == '__main__':
