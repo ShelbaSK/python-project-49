@@ -3,6 +3,7 @@ import prompt
 import brain_games.cli as cli
 import brain_games.scripts.brain_even as brain_even
 import brain_games.scripts.brain_calc as brain_calc
+import brain_games.scripts.brain_gcd as brain_gcd
 
 
 def greetings():
@@ -33,6 +34,10 @@ def start_game(game_name=None):
             for element in range(0, 3):
                 question.append(brain_calc.get_task())
                 promt = 'What is the result of the expression?'
+        case 'gcd':
+            for element in range(0, 3):
+                question.append(brain_gcd.get_task())
+                promt = 'Find the greatest common divisor of given numbers.'
         case _:
             return None
 
