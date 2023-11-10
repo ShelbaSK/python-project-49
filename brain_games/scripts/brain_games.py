@@ -4,6 +4,7 @@ import brain_games.cli as cli
 import brain_games.scripts.brain_even as brain_even
 import brain_games.scripts.brain_calc as brain_calc
 import brain_games.scripts.brain_gcd as brain_gcd
+import brain_games.scripts.brain_progression as brain_progression
 
 
 def greetings():
@@ -38,6 +39,10 @@ def start_game(game_name=None):
             for element in range(0, 3):
                 question.append(brain_gcd.get_task())
                 promt = 'Find the greatest common divisor of given numbers.'
+        case 'progression':
+            for element in range(0, 3):
+                question.append(brain_progression.get_task())
+                promt = 'What number is missing in the progression?'
         case _:
             return None
 
