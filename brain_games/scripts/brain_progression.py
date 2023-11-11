@@ -22,7 +22,7 @@ def get_sequence():
 
 def get_task():
     sequence = get_sequence()
-    position = random.randint(0, len(sequence))
+    position = random.randint(1, len(sequence))
     correct_answer = sequence.pop(position - 1)
     sequence.insert(position - 1, '..')
     question = ' '.join(sequence)
