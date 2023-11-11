@@ -3,6 +3,9 @@ import random
 import brain_games.scripts.brain_games as brain_games
 
 
+promt = 'What is the result of the expression?'
+
+
 def get_operation():
     operation = ('+', '-', '*')
     element = random.randint(0, 2)

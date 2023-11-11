@@ -3,6 +3,9 @@ import random
 import brain_games.scripts.brain_games as brain_games
 
 
+promt = 'What number is missing in the progression?'
+
+
 def get_sequence():
     number = random.randint(1, 10)
     step = random.randint(1, 10)

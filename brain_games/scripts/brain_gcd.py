@@ -3,6 +3,9 @@ import random
 import brain_games.scripts.brain_games as brain_games
 
 
+promt = 'Find the greatest common divisor of given numbers.'
+
+
 def get_gcd(first_operand, second_operand):
 
     if first_operand == second_operand:

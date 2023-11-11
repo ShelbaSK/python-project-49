@@ -5,10 +5,7 @@ import brain_games.scripts.brain_even as brain_even
 import brain_games.scripts.brain_calc as brain_calc
 import brain_games.scripts.brain_gcd as brain_gcd
 import brain_games.scripts.brain_progression as brain_progression
-
-
-def greetings():
-    print('Welcome to the Brain Games!')
+import brain_games.scripts.brain_prime as brain_prime
 
 
 def round(round_data):
@@ -21,7 +18,7 @@ def round(round_data):
 
 
 def start_game(game_name=None):
-    greetings()
+    print('Welcome to the Brain Games!')
     username = cli.welcome_user()
 
     question = []
@@ -29,20 +26,23 @@ def start_game(game_name=None):
         case 'even':
             for element in range(0, 3):
                 question.append(brain_even.get_task())
-                promt = ('Answer "yes" if the number is even, '
-                         'otherwise answer "no".')
+                promt = brain_even.promt
         case 'calc':
             for element in range(0, 3):
                 question.append(brain_calc.get_task())
-                promt = 'What is the result of the expression?'
+                promt = brain_calc.promt
         case 'gcd':
             for element in range(0, 3):
                 question.append(brain_gcd.get_task())
-                promt = 'Find the greatest common divisor of given numbers.'
+                promt = brain_gcd.promt
         case 'progression':
             for element in range(0, 3):
                 question.append(brain_progression.get_task())
-                promt = 'What number is missing in the progression?'
+                promt = brain_progression.promt
+        case 'prime':
+            for element in range(0, 3):
+                question.append(brain_prime.get_task())
+                promt = brain_prime.promt
         case _:
             return None
 
@@ -51,7 +51,7 @@ def start_game(game_name=None):
     score = 0
     while score < 3:
         result = round(question[score])
-        if isinstance(result, bool):
+        if result is True:
             print('Correct!')
             score += 1
         else:

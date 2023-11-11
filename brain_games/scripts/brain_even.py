@@ -3,6 +3,9 @@ import random
 import brain_games.scripts.brain_games as brain_games
 
 
+promt = 'Answer "yes" if the number is even, otherwise answer "no".'
+
+
 def is_even(number):
     result = number % 2
 
