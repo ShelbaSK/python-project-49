@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 import prompt
 import brain_games.cli as cli
-import brain_games.scripts.brain_even as brain_even
-import brain_games.scripts.brain_calc as brain_calc
-import brain_games.scripts.brain_gcd as brain_gcd
-import brain_games.scripts.brain_progression as brain_progression
-import brain_games.scripts.brain_prime as brain_prime
+import brain_games.scripts.games.brain_even as brain_even
+import brain_games.scripts.games.brain_calc as brain_calc
+import brain_games.scripts.games.brain_gcd as brain_gcd
+import brain_games.scripts.games.brain_progression as brain_progression
+import brain_games.scripts.games.brain_prime as brain_prime
 
 
 def round(round_data):
@@ -17,6 +17,9 @@ def round(round_data):
     return user_answer
 
 
+rounds = 3
+
+
 def start_game(game_name=None):
     print('Welcome to the Brain Games!')
     username = cli.welcome_user()
@@ -24,23 +27,23 @@ def start_game(game_name=None):
     question = []
     match game_name:
         case 'even':
-            for element in range(0, 3):
+            for element in range(0, rounds):
                 question.append(brain_even.get_task())
                 promt = brain_even.promt
         case 'calc':
-            for element in range(0, 3):
+            for element in range(0, rounds):
                 question.append(brain_calc.get_task())
                 promt = brain_calc.promt
         case 'gcd':
-            for element in range(0, 3):
+            for element in range(0, rounds):
                 question.append(brain_gcd.get_task())
                 promt = brain_gcd.promt
         case 'progression':
-            for element in range(0, 3):
+            for element in range(0, rounds):
                 question.append(brain_progression.get_task())
                 promt = brain_progression.promt
         case 'prime':
-            for element in range(0, 3):
+            for element in range(0, rounds):
                 question.append(brain_prime.get_task())
                 promt = brain_prime.promt
         case _:

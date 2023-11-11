@@ -8,7 +8,7 @@ promt = 'What is the result of the expression?'
 
 def get_operation():
     operation = ('+', '-', '*')
-    element = random.randint(0, 2)
+    element = random.randint(0, len(operation) - 1)
     return operation[element]
 
 
