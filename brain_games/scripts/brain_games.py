@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 import prompt
 import brain_games.cli as cli
+import brain_games.games.brain_calc as brain_calc
+import brain_games.games.brain_even as brain_even
+import brain_games.games.brain_gcd as brain_gcd
+import brain_games.games.brain_prime as brain_prime
+import brain_games.games.brain_progression as brain_progression
 
 
 def round(round_data):
@@ -43,6 +48,26 @@ def start_game(game=None):
                        f"Let's try again, {username}!")
 
         print(message)
+
+
+def init_calc():
+    start_game(brain_calc)
+
+
+def init_even():
+    start_game(brain_even)
+
+
+def init_gcd():
+    start_game(brain_gcd)
+
+
+def init_prime():
+    start_game(brain_prime)
+
+
+def init_progression():
+    start_game(brain_progression)
 
 
 def main():
