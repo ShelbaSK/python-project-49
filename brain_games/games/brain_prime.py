@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 import random
-import brain_games.scripts.brain_games as brain_games
 
 
 promt = 'Answer "yes" if given number is prime. Otherwise answer "no".'
@@ -25,11 +24,3 @@ def get_task():
     correct_answer = is_prime(question)
 
     return [question, correct_answer]
-
-
-def main():
-    brain_games.start_game('prime')
-
-
-if __name__ == '__main__':
-    main()

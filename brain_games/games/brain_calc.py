@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 import random
-import brain_games.scripts.brain_games as brain_games
 
 
 promt = 'What is the result of the expression?'
@@ -30,11 +29,3 @@ def get_task():
             return None
 
     return [question, str(correct_answer)]
-
-
-def main():
-    brain_games.start_game('calc')
-
-
-if __name__ == '__main__':
-    main()

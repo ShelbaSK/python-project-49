@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 import random
-import brain_games.scripts.brain_games as brain_games
 
 
 promt = 'What number is missing in the progression?'
@@ -28,11 +27,3 @@ def get_task():
     question = ' '.join(sequence)
 
     return [question, correct_answer]
-
-
-def main():
-    brain_games.start_game('progression')
-
-
-if __name__ == '__main__':
-    main()
