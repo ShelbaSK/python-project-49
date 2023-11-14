@@ -2,7 +2,7 @@
 import random
 
 
-promt = 'What is the result of the expression?'
+PROMT = 'What is the result of the expression?'
 
 
 def get_operation():

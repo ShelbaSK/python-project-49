@@ -2,18 +2,21 @@
 import random
 
 
-promt = 'Answer "yes" if the number is even, otherwise answer "no".'
+PROMT = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 def is_even(number):
     result = number % 2
 
     if not result:
-        return 'yes'
-    return 'no'
+        return True
+    return False
 
 
 def get_task():
     question = random.randint(1, 100)
-    correct_answer = is_even(question)
+    if is_even(question):
+        correct_answer = 'yes'
+    else:
+        correct_answer = 'no'
     return [question, correct_answer]

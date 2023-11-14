@@ -2,7 +2,7 @@
 import random
 
 
-promt = 'What number is missing in the progression?'
+PROMT = 'What number is missing in the progression?'
 
 
 def get_sequence():

@@ -2,7 +2,7 @@
 import random
 
 
-promt = 'Find the greatest common divisor of given numbers.'
+PROMT = 'Find the greatest common divisor of given numbers.'
 
 
 def get_gcd(first_operand, second_operand):
