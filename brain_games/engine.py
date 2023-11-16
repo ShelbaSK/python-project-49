@@ -50,3 +50,16 @@ def finish_game(username, result, user_answer=None, correct_answer=None):
                    f"Correct answer was '{correct_answer}'.\n"
                    f"Let's try again, {username}!")
     return message
+
+
+ROUNDS = 3
+
+
+def init_game(game=None):
+    username = greeting_player()
+    if game is not None:
+        questions = prepare_game(game, ROUNDS)
+        print(game.PROMT)
+        result = start_game(questions, ROUNDS)
+        message = finish_game(username, *result)
+        print(message)
