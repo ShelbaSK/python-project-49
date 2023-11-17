@@ -11,21 +11,25 @@ def get_operation():
     return operation[element]
 
 
-def get_task():
-    operation = get_operation()
-    fitst_operand = random.randint(1, 100)
-    second_operand = random.randint(1, 100)
-
-    question = f'{fitst_operand} {operation} {second_operand}'
-
+def get_result(operation, first_operand, second_operand):
     match operation:
         case '+':
-            correct_answer = fitst_operand + second_operand
+            result = first_operand + second_operand
         case '-':
-            correct_answer = fitst_operand - second_operand
+            result = first_operand - second_operand
         case '*':
-            correct_answer = fitst_operand * second_operand
+            result = first_operand * second_operand
         case _:
             return None
+    return result
+
+
+def get_task():
+    operation = get_operation()
+    first_operand = random.randint(1, 100)
+    second_operand = random.randint(1, 100)
+
+    question = f'{first_operand} {operation} {second_operand}'
+    correct_answer = get_result(operation, first_operand, second_operand)
 
     return [question, str(correct_answer)]
