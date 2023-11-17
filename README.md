@@ -25,6 +25,9 @@ make build
 make package-install
 ```
 
+# Минимальные требования
+Для сборки проекта потребуется "poetry-core"
+
 # Примеры игры
 ### asciinema brain-even
 [![asciicast](https://asciinema.org/a/8TzYxkx2Ps7WnRBq7eT21xLBU.svg)](https://asciinema.org/a/8TzYxkx2Ps7WnRBq7eT21xLBU)
